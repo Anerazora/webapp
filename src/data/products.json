@@ -1,0 +1,26 @@
+[
+    {
+      "id": 1,
+      "name": "Balón adulto",
+      "price": 80,
+      "imgUrl": "./images/balon1.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Balón niño",
+      "price": 50,
+      "imgUrl": "./images/balon1.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Camiseta",
+      "price": 90,
+      "imgUrl": "./images/camiseta1.JPG"
+    },
+    {
+      "id": 4,
+      "name": "Canasta",
+      "price": 150,
+      "imgUrl": "./images/canasta.jpg"
+    }
+  ]
