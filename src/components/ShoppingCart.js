@@ -17,7 +17,7 @@ export const ShoppingCart = () => {
     <div className="cart-container">
       <div>
         <div>Items in cart: {quantity}</div>
-        <div>Total: ${totalPrice}</div>
+        <div>Total: {totalPrice} €</div>
         <button onClick={() => console.log(cart)}>Checkout</button>
       </div>
     </div>

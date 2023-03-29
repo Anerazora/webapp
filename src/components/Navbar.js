@@ -18,12 +18,12 @@ export const Navbar = () => {
   return (
     <nav>
       <Link to={"/"} style={navStyles}>
-        <h2>Store</h2>
+        <h2>Home</h2>
       </Link>
       <ul className="nav-list">
         <Link to={"/cart"} style={navStyles}>
           <li>
-            Cart items: <span className="cart-count">{quantity}</span>
+            Carrrito: <span className="cart-count">{quantity}</span>
           </li>
         </Link>
       </ul>

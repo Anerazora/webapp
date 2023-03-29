@@ -50,21 +50,21 @@ export const Item = ({ name, price, id, imgUrl }) => {
 
             <div>{name}</div>
             <img src={imgUrl} width="60" height="60" />
-            <div className="item-price">${price}</div>
+            <div className="item-price">{price} €</div>
 
             {quantityPerItem === 0 ? (
                 <button className="item-add-button" onClick={() => addToCart()}>
-                    + Add to cart
+                    + Añadir al carrito
                 </button>
             ) : (
                 <button className="item-plus-button" onClick={() => addToCart()}>
-                    + add more
+                    + Añadir producto
                 </button>
             )}
 
             {quantityPerItem > 0 && (
                 <button className="item-minus-button" onClick={() => removeItem(id)}>
-                    subtract item
+                    - Quitar producto
                 </button>
             )}
         </div>
