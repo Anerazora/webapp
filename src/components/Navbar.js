@@ -23,7 +23,7 @@ export const Navbar = () => {
       <ul className="nav-list">
         <Link to={"/cart"} style={navStyles}>
           <li>
-            Carrrito: <span className="cart-count">{quantity}</span>
+            Carrito: <span className="cart-count">{quantity}</span>
           </li>
         </Link>
       </ul>

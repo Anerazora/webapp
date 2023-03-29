@@ -3,7 +3,7 @@ import { Item } from "./Item";
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 
-export const ItemList = () => {
+export const Order = () => {
 
   const [products, setProducts] = useState([]);
 
@@ -14,8 +14,8 @@ export const ItemList = () => {
               for (let key in response.data) {
                   arrayProducts.push({
                       id: key,
-                      name: response.data[key].name,
-                      price: response.data[key].price,
+                    //   name: response.data[key].name,
+                    //   price: response.data[key].price,
                       imgUrl: response.data[key].imgUrl
                   })
               }

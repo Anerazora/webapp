@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import { Link } from "react-router-dom";
 import { CartContext } from "../contexts/ShoppingCartContext";
 
 export const ShoppingCart = () => {
@@ -16,9 +17,11 @@ export const ShoppingCart = () => {
   return (
     <div className="cart-container">
       <div>
-        <div>Items in cart: {quantity}</div>
-        <div>Total: {totalPrice} €</div>
-        <button onClick={() => console.log(cart)}>Checkout</button>
+        <h1>Resumen Cesta</h1>
+        <div>Productos en la cesta: {quantity}</div>
+        <div>Precio total: {totalPrice} €</div>
+        {/* <button onClick={() => console.log(cart)}>REALIZAR PEDIDO</button> */}
+        <div><Link to="/order"><button>REALIZAR PEDIDO</button></Link></div>
       </div>
     </div>
   );
