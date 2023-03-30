@@ -8,15 +8,16 @@ export const Order = () => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-      axios.get('https://webapp-96011-default-rtdb.europe-west1.firebasedatabase.app/products.json')
+      axios.get('https://webapp-96011-default-rtdb.europe-west1.firebasedatabase.app/orders.json')
           .then((response) => {
               let arrayProducts = [];
               for (let key in response.data) {
                   arrayProducts.push({
                       id: key,
-                    //   name: response.data[key].name,
-                    //   price: response.data[key].price,
-                      imgUrl: response.data[key].imgUrl
+                    name: response.data[key].name,
+                    totalPrice: response.data[key].totalPrice,
+                      //imgUrl: response.data[key].imgUrl
+                      quantity: response.data[key].quantity
                   })
               }
               
