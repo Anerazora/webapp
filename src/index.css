@@ -38,6 +38,15 @@ nav > h2 {
   border: 1px solid #ddd;
 }
 
+.item-box-orders {
+  background-color: #fff;
+  margin: 10px;
+  padding: 20px;
+  width: 150px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
 .item-quantity {
   color: #fff;
   background-color: #f0ad4e;

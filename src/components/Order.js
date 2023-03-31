@@ -1,5 +1,5 @@
 import React from "react";
-import { Item } from "./Item";
+import { OrderList } from "./OrderList";
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 
@@ -30,7 +30,7 @@ export const Order = () => {
   return (
     <div className="items-list">
       {products.map((product, idx) => {
-        return <Item key={product.id} {...product} />;
+        return <OrderList key={product.id} {...product} />;
       })}
     </div>
   );
