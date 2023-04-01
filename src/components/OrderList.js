@@ -1,8 +1,9 @@
 import React, { useContext } from "react";
 import { CartContext } from "../contexts/ShoppingCartContext";
-import { Order } from "./Order";
+// import { FormClient } from "./FormClient";
+// import { Order } from "./Order";
 
-export const OrderList = ({ name, totalPrice, id, quantity }) => {
+export const OrderList = ({ name, totalPrice, id, quantity, datos }) => {
     const [cart, setCart] = useContext(CartContext);
 
     const getQuantityById = (id) => {
@@ -21,6 +22,7 @@ export const OrderList = ({ name, totalPrice, id, quantity }) => {
             )}
             
             <div> Pedido: {id}</div>
+            <div> Datos: {datos}</div>
             <div> Nombre: {name}</div>
             <div> Cantidad: {quantity}</div>
             <div> Precio total: {totalPrice} €</div>

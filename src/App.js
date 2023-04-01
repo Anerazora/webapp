@@ -7,6 +7,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { ShoppingCart } from "./components/ShoppingCart";
 import { ShoppingCartProvider } from "./contexts/ShoppingCartContext";
 import { OrderList } from "./components/OrderList";
+import { FormClient } from "./components/FormClient";
+
 
 export const App = () => {
   return (
@@ -19,6 +21,7 @@ export const App = () => {
           <Route path="/order" element={<Order />} />
           <Route path="/orderList" element={<OrderList />} />
           <Route path="/confirmOrder" element={<ConfirmOrder />} />
+          <Route path="/formClient" element={<FormClient />} />
         </Routes>
       </Router>
     </ShoppingCartProvider>

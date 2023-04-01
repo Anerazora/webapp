@@ -27,17 +27,17 @@ export const ConfirmOrder = () => {
 
 
 
-  function AddOrder() {
+//   function AddOrder() {
 
-    if (totalPrice > 0) {
+//     if (totalPrice > 0) {
 
-      axios.post('https://webapp-96011-default-rtdb.europe-west1.firebasedatabase.app/orders.json', order)
-        .then((response) => {
-          alert('El pedido se ha realizado');
-        })
-    }
+//       axios.post('https://webapp-96011-default-rtdb.europe-west1.firebasedatabase.app/orders.json', order)
+//         .then((response) => {
+//           alert('El pedido se ha realizado');
+//         })
+//     }
 
-  }
+//   }
 
   return (
     <div className="cart-container">
@@ -46,7 +46,8 @@ export const ConfirmOrder = () => {
         <div>Productos: {name} </div>
         <div>Cantidad de productos: {quantity}</div>
         <div>Precio total: {totalPrice} €</div>
-        <div><Link to="/order"><button onClick={AddOrder}>CONTINUAR</button></Link></div>
+        {/* <div><Link to="/order"><button onClick={AddOrder}>CONTINUAR</button></Link></div> */}
+        <div><Link to="/formClient"><button>CONTINUAR</button></Link></div>
         
       </div>
     </div>

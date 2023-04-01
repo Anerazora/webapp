@@ -14,6 +14,7 @@ export const Order = () => {
         for (let key in response.data) {
           arrayProducts.push({
             id: key,
+            datos: response.data[key].datos,
             name: response.data[key].name,
             totalPrice: response.data[key].totalPrice,
             quantity: response.data[key].quantity
