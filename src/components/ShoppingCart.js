@@ -47,7 +47,8 @@ export const ShoppingCart = () => {
         <div>Cantidad de productos: {quantity}</div>
         <div>Precio total: {totalPrice} €</div>
         {/* <button onClick={() => console.log(cart)}>REALIZAR PEDIDO</button> */}
-        <div><Link to="/order"><button onClick={AddOrder}>REALIZAR PEDIDO</button></Link></div>
+        {/* <div><Link to="/order"><button onClick={AddOrder}>REALIZAR PEDIDO</button></Link></div> */}
+        <div><Link to="/confirmOrder"><button>REALIZAR PEDIDO</button></Link></div>
       </div>
     </div>
   );

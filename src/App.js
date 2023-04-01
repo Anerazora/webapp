@@ -1,7 +1,7 @@
 import React from "react";
 import { ItemList } from "./components/ItemList";
 import { Order } from "./components/Order";
-
+import { ConfirmOrder } from "./components/ConfirmOrder";
 import { Navbar } from "./components/Navbar";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { ShoppingCart } from "./components/ShoppingCart";
@@ -18,6 +18,7 @@ export const App = () => {
           <Route path="/cart" element={<ShoppingCart />} />
           <Route path="/order" element={<Order />} />
           <Route path="/orderList" element={<OrderList />} />
+          <Route path="/confirmOrder" element={<ConfirmOrder />} />
         </Routes>
       </Router>
     </ShoppingCartProvider>

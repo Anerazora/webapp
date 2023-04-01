@@ -26,7 +26,7 @@ export const Navbar = () => {
             Carrito: <span className="cart-count">{quantity}</span>
           </li>
         </Link>
-        <Link to={"/orderList"} style={navStyles}>
+        <Link to={"/order"} style={navStyles}>
           <li>
             Pedidos
           </li>

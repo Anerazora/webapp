@@ -16,7 +16,6 @@ export const Order = () => {
             id: key,
             name: response.data[key].name,
             totalPrice: response.data[key].totalPrice,
-            //imgUrl: response.data[key].imgUrl
             quantity: response.data[key].quantity
           })
         }
