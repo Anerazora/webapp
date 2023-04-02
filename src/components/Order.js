@@ -7,6 +7,8 @@ export const Order = () => {
 
   const [products, setProducts] = useState([]);
 
+  
+
   useEffect(() => {
     axios.get('https://webapp-96011-default-rtdb.europe-west1.firebasedatabase.app/orders.json')
       .then((response) => {
@@ -32,9 +34,9 @@ export const Order = () => {
 
   return (
     <div className="items-list">
-      {products.map((product, idx) => {
+     <li> {products.map((product, idx) => {
         return <OrderList key={product.id} {...product} />;
-      })}
+      })}</li>
     </div>
   );
 };

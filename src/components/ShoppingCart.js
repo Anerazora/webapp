@@ -19,25 +19,25 @@ export const ShoppingCart = () => {
     return acc + curr.name;
   }, ' ');
 
-  const order = {
-    name: name,
-    quantity: quantity,
-    totalPrice: totalPrice
-  }
+  // const order = {
+  //   name: name,
+  //   quantity: quantity,
+  //   totalPrice: totalPrice
+  // }
 
 
 
-  function AddOrder() {
+  // function AddOrder() {
 
-    if (totalPrice > 0) {
+  //   if (totalPrice > 0) {
 
-      axios.post('https://webapp-96011-default-rtdb.europe-west1.firebasedatabase.app/orders.json', order)
-        .then((response) => {
-          alert('El pedido se ha realizado');
-        })
-    }
+  //     axios.post('https://webapp-96011-default-rtdb.europe-west1.firebasedatabase.app/orders.json', order)
+  //       .then((response) => {
+  //         alert('El pedido se ha realizado');
+  //       })
+  //   }
 
-  }
+  // }
 
   return (
     <div className="cart-container">
@@ -48,7 +48,7 @@ export const ShoppingCart = () => {
         <div>Precio total: {totalPrice} €</div>
         {/* <button onClick={() => console.log(cart)}>REALIZAR PEDIDO</button> */}
         {/* <div><Link to="/order"><button onClick={AddOrder}>REALIZAR PEDIDO</button></Link></div> */}
-        <div><Link to="/confirmOrder"><button>REALIZAR PEDIDO</button></Link></div>
+        <div><Link to="/confirmOrder"><button className="item-add-button">REALIZAR PEDIDO</button></Link></div>
       </div>
     </div>
   );

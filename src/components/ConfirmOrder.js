@@ -47,7 +47,7 @@ export const ConfirmOrder = () => {
         <div>Cantidad de productos: {quantity}</div>
         <div>Precio total: {totalPrice} €</div>
         {/* <div><Link to="/order"><button onClick={AddOrder}>CONTINUAR</button></Link></div> */}
-        <div><Link to="/formClient"><button>CONTINUAR</button></Link></div>
+        <div><Link to="/formClient"><button className="item-add-button">CONTINUAR</button></Link></div>
         
       </div>
     </div>

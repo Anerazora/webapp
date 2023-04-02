@@ -39,8 +39,7 @@ export const FormClient = () => {
       datosDireccionEnvio: datos.direccionEnvio
     }
 
-
-  
+    
 
     const handleInputChange = (event) => {
         // console.log(event.target.name)
@@ -57,6 +56,8 @@ export const FormClient = () => {
         console.log('enviando datos...' + datos.nombre + ' ' + datos.apellido + datos.mail + datos.dni + datos.direccionEnvio)
     }
 
+   
+  
   function AddOrder() {
 
     if (totalPrice > 0) {
@@ -65,14 +66,17 @@ export const FormClient = () => {
         .then((response) => {
            alert('El pedido se ha realizado');
         })
+        
      }
 
    }
 
     return (
         <Fragment>
+            <div className="cart-container">
+            
+            <form className ="row" onSubmit={enviarDatos}> 
             <h1>Formulario</h1>
-            <form className="row" onSubmit={enviarDatos}>
                 <div className="col-md-3">
                     <input type="text" placeholder="Nombre" className="form-control" onChange={handleInputChange} name="nombre"></input>
                 </div>
@@ -88,9 +92,11 @@ export const FormClient = () => {
                 <div className="col-md-3">
                     <input type="text" placeholder="Direccion de envio" className="form-control" onChange={handleInputChange} name="direccionEnvio"></input>
                 </div>
-                <Link to="/thanks"><button onClick={AddOrder}>CONTINUAR</button></Link>
+                <Link to="/thanks "><button className="item-add-button" onClick={AddOrder}>CONTINUAR</button></Link>
+
                 {/* <div><Link to="/order"><button onClick={AddOrder}>CONTINUAR</button></Link></div> */}
             </form>
+            </div>
             {/* <ul>
                 <li>{datos.nombre}</li>
                 <li>{datos.apellido}</li>
