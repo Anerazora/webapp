@@ -17,7 +17,7 @@ class Thanks extends React.Component {
                       En unos días recibirá su pedido <br/>
                     </div>
                     <div>
-                        <div><Link to="/"><button onClick={CartContext}>REALIZAR NUEVO PEDIDO</button></Link></div>
+                        <div><Link to="/"><button className="item-add-button" onClick={CartContext}>REALIZAR NUEVO PEDIDO</button></Link></div>
                     </div>
                 </div>
                 </div>

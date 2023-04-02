@@ -53,7 +53,7 @@ export const OrderList = ({ name, totalPrice, id, quantity, datos, datosMail, da
             {quantityPerItem > 0 && (
                 <div className="item-quantity">{quantityPerItem}</div>
             )}
-            <div>Pedido: {id}<Link to="/detailOrders"><button>Ver pedido</button></Link><button onClick={DeleteOrder}>Borrar pedido</button></div>
+            <div>Pedido: {id}<Link to="/detailOrders"><button className="item-add-button">Ver pedido</button></Link><button className="item-delete-button" onClick={DeleteOrder}>Borrar pedido</button></div>
             {/* <div> Pedido: {id}<button onClick={id} >Ver pedido</button></div> */}
             <div> Datos: {datos}</div>
             <div> Mail: {datosMail}</div>
