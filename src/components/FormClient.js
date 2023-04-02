@@ -23,14 +23,20 @@ export const FormClient = () => {
 
     const [datos, setDatos] = useState({
         nombre: '',
-        apellido: ''
+        apellido: '',
+        mail: '',
+        dni: '',
+        direccionEnvio: ''
     })
-  
+ 
     const order = {
       name: name,
       quantity: quantity,
       totalPrice: totalPrice,
-      datos: datos.nombre +' '+ datos.apellido
+      datos: datos.nombre +' '+ datos.apellido,
+      datosMail: datos.mail,
+      datosDni: datos.dni,
+      datosDireccionEnvio: datos.direccionEnvio
     }
 
 
@@ -43,11 +49,12 @@ export const FormClient = () => {
             ...datos,
             [event.target.name] : event.target.value
         })
+       
     }
 
     const enviarDatos = (event) => {
         event.preventDefault()
-        console.log('enviando datos...' + datos.nombre + ' ' + datos.apellido)
+        console.log('enviando datos...' + datos.nombre + ' ' + datos.apellido + datos.mail + datos.dni + datos.direccionEnvio)
     }
 
   function AddOrder() {
@@ -72,13 +79,22 @@ export const FormClient = () => {
                 <div className="col-md-3">
                     <input type="text" placeholder="Apellido" className="form-control" onChange={handleInputChange} name="apellido"></input>
                 </div>
-                <Link to="/order"><button onClick={AddOrder}>CONTINUAR</button></Link>
+                <div className="col-md-3">
+                    <input type="text" placeholder="Mail" className="form-control" onChange={handleInputChange} name="mail"></input>
+                </div>
+                <div className="col-md-3">
+                    <input type="text" placeholder="DNI" className="form-control" onChange={handleInputChange} name="dni"></input>
+                </div>
+                <div className="col-md-3">
+                    <input type="text" placeholder="Direccion de envio" className="form-control" onChange={handleInputChange} name="direccionEnvio"></input>
+                </div>
+                <Link to="/thanks"><button onClick={AddOrder}>CONTINUAR</button></Link>
                 {/* <div><Link to="/order"><button onClick={AddOrder}>CONTINUAR</button></Link></div> */}
             </form>
-            <ul>
+            {/* <ul>
                 <li>{datos.nombre}</li>
                 <li>{datos.apellido}</li>
-            </ul>
+            </ul> */}
         </Fragment>
     );
 }

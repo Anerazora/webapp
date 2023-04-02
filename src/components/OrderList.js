@@ -3,7 +3,7 @@ import { CartContext } from "../contexts/ShoppingCartContext";
 // import { FormClient } from "./FormClient";
 // import { Order } from "./Order";
 
-export const OrderList = ({ name, totalPrice, id, quantity, datos }) => {
+export const OrderList = ({ name, totalPrice, id, quantity, datos, datosMail, datosDni, datosDireccionEnvio}) => {
     const [cart, setCart] = useContext(CartContext);
 
     const getQuantityById = (id) => {
@@ -23,6 +23,9 @@ export const OrderList = ({ name, totalPrice, id, quantity, datos }) => {
             
             <div> Pedido: {id}</div>
             <div> Datos: {datos}</div>
+            <div> Mail: {datosMail}</div>
+            <div> DNI: {datosDni}</div>
+            <div> Dirección de envio: {datosDireccionEnvio}</div>
             <div> Nombre: {name}</div>
             <div> Cantidad: {quantity}</div>
             <div> Precio total: {totalPrice} €</div>

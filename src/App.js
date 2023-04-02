@@ -8,6 +8,7 @@ import { ShoppingCart } from "./components/ShoppingCart";
 import { ShoppingCartProvider } from "./contexts/ShoppingCartContext";
 import { OrderList } from "./components/OrderList";
 import { FormClient } from "./components/FormClient";
+import Thanks from "./components/Thanks";
 
 
 export const App = () => {
@@ -22,6 +23,7 @@ export const App = () => {
           <Route path="/orderList" element={<OrderList />} />
           <Route path="/confirmOrder" element={<ConfirmOrder />} />
           <Route path="/formClient" element={<FormClient />} />
+          <Route path="/thanks" element={<Thanks />} />
         </Routes>
       </Router>
     </ShoppingCartProvider>

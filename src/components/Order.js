@@ -15,6 +15,9 @@ export const Order = () => {
           arrayProducts.push({
             id: key,
             datos: response.data[key].datos,
+            datosMail: response.data[key].datosMail,
+            datosDni: response.data[key].datosDni,
+            datosDireccionEnvio: response.data[key].datosDireccionEnvio,
             name: response.data[key].name,
             totalPrice: response.data[key].totalPrice,
             quantity: response.data[key].quantity
