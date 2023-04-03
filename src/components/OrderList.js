@@ -35,7 +35,7 @@ export const OrderList = ({ name, totalPrice, id, quantity, datos, datosMail, da
     
     function DeleteOrder() {
 
-      axios.delete('https://webapp-96011-default-rtdb.europe-west1.firebasedatabase.app/orders/'+ deleteId+ '.json')
+      axios.delete('https://webapp-96011-default-rtdb.europe-west1.firebasedatabase.app/orders/'+ id + '.json')
         .then((response) => {
            alert('El pedido se ha borrado');
         })
